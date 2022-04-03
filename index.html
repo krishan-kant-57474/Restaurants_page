@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurants</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Flamenco&display=swap");
+      * {
+        margin: 0px;
+        box-sizing: border-box;
+        padding: 0px;
+      }
+
+      header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(https://i.pinimg.com/originals/ae/18/50/ae185049c32fc24c3a02f465b41e488a.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* width: 100vw; */
+        height: 100vh;
+        /* opacity: -0.3; */
+      }
+      .row {
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        height: 120px;
+        width: auto;
+        float: left;
+        margin: 20px 0 0 30px;
+        filter: drop-shadow(0 0.5rem 0.1rem #fff);
+        /* border: 3px solid rgb(56 26 16); */
+        /* border-radius: 50%; */
+      }
+      .main_nav {
+        float: right;
+        margin-top: 60px;
+        /* margin-right: 10px; */
+      }
+
+      .main_nav li {
+        display: inline-block;
+        list-style: none;
+        margin-left: 40px;
+        padding: 5px 0;
+      }
+      .main_nav li:hover {
+        border-bottom: 2px solid #bf55ec;
+      }
+      body {
+        font-size: 20px;
+        overflow-x: hidden;
+        color: #fff;
+        font-family: "Flamenco", cursive;
+      }
+      .main_nav a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 90%;
+        font-weight: 100;
+      }
+
+      .clearfix::after {
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0px;
+        clear: both;
+      }
+
+      .main-contain {
+        /* text-align: center;
+     */
+        width: 1180px;
+        position: absolute;
+        /* border: 2px solid red; */
+
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 240%;
+        word-spacing: 5px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: lighter;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 200px;
+        transition: background-color 0.2s, border 0.2s, color 0.2s;
+      }
+      .b-full {
+        background-color: transparent;
+        color: #bf55ec;
+        margin-right: 15px;
+        border: 1px solid #bf55ec;
+      }
+      .b-nav {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+      .b-full:hover {
+        background-color: #fff;
+      }
+
+      .b-nav:hover {
+        background-color: #bf55ec;
+      }
+      .color_change {
+        animation: colorchange 1s infinite;
+      }
+      @keyframes colorchange {
+        0% {
+          color: red;
+        }
+        25% {
+          color: #bf55ec;
+        }
+        50% {
+          color: white;
+        }
+
+        100% {
+          color: #bf55ec;
+        }
+      }
+
+      .mobile-icon {
+        display: none;
+      }
+
+      @media only screen and (max-width: 1180px) {
+        .main-contain {
+          width: 100%;
+          padding: 0 2%;
+        }
+      }
+      @media only screen and (max-width: 998px) {
+        h1 {
+          font-size: 200%;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        h1 {
+          font-size: 180%;
+        }
+        .main_nav {
+          display: none;
+          float: left;
+        }
+        .mobile-icon {
+          display: inline-block;
+          color: white;
+          float: right;
+          margin-right: 20px;
+          margin-top: 30px;
+        }
+        .main_nav li {
+          display: block;
+          margin-top: 10px;
+        }
+        .main-contain {
+          top: 60%;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        .b-full {
+          margin-bottom: 20px;
+        }
+        h1 {
+          font-size: 180%;
+        }
+        .main-contain {
+          top: 65%;
+        }
+        .logo {
+          height: 70px;
+          width: auto;
+          float: left;
+          margin: 20px 0 0 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="row clearfix">
+          <img
+            src="https://www.freepnglogos.com/uploads/coffee-logo-png/coffee-logo-png-7.PNG"
+            class="logo"
+          />
+
+          <ul class="main_nav animated slideInDown" id="check-class">
+            <li><a href="#">CAKE DELIVERY</a></li>
+            <li><a href="#">HOW TO ORDER</a></li>
+            <li><a href="#">CHECK MORE</a></li>
+            <li><a href="#">SIGN UP</a></li>
+          </ul>
+
+          <a href="#" class="mobile-icon" onclick="slideshow()"
+            ><i class="fa fa-bars"></i
+          ></a>
+        </div>
+      </nav>
+
+      <div class="main-contain">
+        <h1>
+          WELCOME TO <span class="color_change">KRISH CAFE</span>.<br />
+          HOUSE OF CAFE LOVER OO YES.
+        </h1>
+        <a href="#" class="btn b-full">click to order</a>
+        <a href="#" class="btn b-nav">show me more</a>
+      </div>
+    </header>
+    <script>
+      function slideshow() {
+        var x = document.getElementById("check-class");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
